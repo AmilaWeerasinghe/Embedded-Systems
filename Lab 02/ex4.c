@@ -8,7 +8,7 @@ int c=0;
 
 int main(){
 	DDRD &= ~(1<<2);//PD2 (INT0)is input
-	DDRD &= ~(1<<3);//PD2 (INT1)is input
+	DDRD &= ~(1<<3);//PD3 (INT1)is input
 	DDRB |= 0b11111111;//make PORTB all pins as output
 	
 	EICRA |= (1<<ISC01); 

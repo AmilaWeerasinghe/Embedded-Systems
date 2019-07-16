@@ -2,11 +2,11 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#define BLINK_DELAY_MS 200
+#define BLINK_DELAY_MS 100
 
 
 int main(){
-	DDRD |= 0b01111111;//PD7 as input
+	DDRD &= ~(1<<7);//PD7 (INT0)is input
 	DDRB |= 0b11111111;//make PORTB all pins as output
 	
 	int count=0;

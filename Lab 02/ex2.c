@@ -23,7 +23,7 @@ int main(){
 }
 
 
-ISR(INT0_vect,INT1_vect){
+ISR(INT0_vect){
 	PORTB = ~(PORTB);
 	
 }
